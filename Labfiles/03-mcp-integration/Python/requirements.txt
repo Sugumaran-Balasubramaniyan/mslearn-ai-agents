@@ -1,5 +1,7 @@
 python-dotenv
 azure-identity
+# Newer cryptography releases no longer publish Intel macOS wheels.
+cryptography<49; sys_platform == "darwin" and platform_machine == "x86_64"
 uvicorn
 azure-ai-projects==2.3.0
 # openai 3.x replaced httpx with httpx2, which breaks azure-ai-projects'
